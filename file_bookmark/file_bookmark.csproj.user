@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="dragdrop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="menu_bar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="u_button_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="u_button_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="win1_pin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
