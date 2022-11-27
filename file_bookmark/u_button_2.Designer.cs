@@ -51,6 +51,8 @@
 			this.label1.Size = new System.Drawing.Size(26, 13);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "text";
+			this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+			this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label1_MouseUp);
 			// 
 			// u_button_2
 			// 

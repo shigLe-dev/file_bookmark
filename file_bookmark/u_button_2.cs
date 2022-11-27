@@ -53,5 +53,15 @@ namespace file_bookmark
 			//PictureBox1に表示する
 			this.pictureBox1.Image = canvas;
 		}
+
+		private void label1_MouseUp(object sender, MouseEventArgs e)
+		{
+			label1.ForeColor = Color.FromArgb(0, 255, 136);
+		}
+
+		private void label1_MouseDown(object sender, MouseEventArgs e)
+		{
+			label1.ForeColor = Color.FromArgb(0, 150, 77);
+		}
 	}
 }

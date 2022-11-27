@@ -47,14 +47,20 @@ namespace file_bookmark
 			label2.Text = dragFilePathArr[0];
 
 			readcsv();
-
-			for(int i = 0;i < file_data.Count;i++)
+			if(comboBox1.SelectedItem != null)
 			{
-				if(file_data[i][0] == comboBox1.SelectedItem.ToString())
+				for (int i = 0; i < file_data.Count; i++)
 				{
-					file_data[i].Add(dragFilePathArr[0]);
-					break;
+					if (file_data[i][0] == comboBox1.SelectedItem.ToString())
+					{
+						file_data[i].Add(dragFilePathArr[0]);
+						break;
+					}
 				}
+			}
+			else
+			{
+				label2.Text = "Error:ブックマークフォルダを選択してください。";
 			}
 
 			writecsv();
