@@ -4,6 +4,12 @@
     <Compile Update="dragdrop.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="file_click_box.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="file_list_box.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +23,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="win1_pin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="win2_list.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

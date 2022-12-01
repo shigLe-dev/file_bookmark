@@ -73,9 +73,29 @@ namespace file_bookmark {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap image_logo {
+            get {
+                object obj = ResourceManager.GetObject("image_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap more_button {
             get {
                 object obj = ResourceManager.GetObject("more_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap txt_logo {
+            get {
+                object obj = ResourceManager.GetObject("txt_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

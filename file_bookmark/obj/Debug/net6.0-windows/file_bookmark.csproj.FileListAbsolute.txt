@@ -21,3 +21,6 @@ C:\cs_project\file_bookmark\file_bookmark\obj\Debug\net6.0-windows\file_bookmark
 C:\cs_project\file_bookmark\file_bookmark\obj\Debug\net6.0-windows\file_bookmark.Resource1.resources
 C:\cs_project\file_bookmark\file_bookmark\obj\Debug\net6.0-windows\file_bookmark.menu_bar.resources
 C:\cs_project\file_bookmark\file_bookmark\obj\Debug\net6.0-windows\file_bookmark.u_button_2.resources
+C:\cs_project\file_bookmark\file_bookmark\obj\Debug\net6.0-windows\file_bookmark.win2_list.resources
+C:\cs_project\file_bookmark\file_bookmark\obj\Debug\net6.0-windows\file_bookmark.file_list_box.resources
+C:\cs_project\file_bookmark\file_bookmark\obj\Debug\net6.0-windows\file_bookmark.file_click_box.resources

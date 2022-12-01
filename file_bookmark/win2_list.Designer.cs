@@ -1,6 +1,6 @@
 ﻿namespace file_bookmark
 {
-	partial class u_button_2
+	partial class win2_list
 	{
 		/// <summary> 
 		/// 必要なデザイナー変数です。
@@ -28,44 +28,48 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.file_list_box1 = new file_bookmark.file_list_box();
 			this.label1 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.SuspendLayout();
 			// 
-			// pictureBox1
+			// file_list_box1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(105, 33);
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+			this.file_list_box1.AutoScroll = true;
+			this.file_list_box1.Location = new System.Drawing.Point(60, 137);
+			this.file_list_box1.Name = "file_list_box1";
+			this.file_list_box1.Size = new System.Drawing.Size(256, 220);
+			this.file_list_box1.TabIndex = 0;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(136)))));
-			this.label1.Location = new System.Drawing.Point(8, 8);
+			this.label1.Location = new System.Drawing.Point(60, 114);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(26, 13);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "text";
-			this.label1.Click += new System.EventHandler(this.label1_Click);
-			this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-			this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label1_MouseUp);
+			this.label1.Size = new System.Drawing.Size(120, 20);
+			this.label1.TabIndex = 3;
+			this.label1.Text = "ブックマークフォルダ:";
 			// 
-			// u_button_2
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(186, 115);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(121, 23);
+			this.comboBox1.TabIndex = 4;
+			this.comboBox1.Text = "選択...";
+			// 
+			// win2_list
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.pictureBox1);
-			this.Name = "u_button_2";
-			this.Size = new System.Drawing.Size(156, 33);
-			this.Load += new System.EventHandler(this.u_button_2_Load);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.Controls.Add(this.file_list_box1);
+			this.Name = "win2_list";
+			this.Size = new System.Drawing.Size(371, 399);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -73,7 +77,8 @@
 
 		#endregion
 
-		private PictureBox pictureBox1;
+		private file_list_box file_list_box1;
 		private Label label1;
+		private ComboBox comboBox1;
 	}
 }

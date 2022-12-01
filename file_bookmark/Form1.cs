@@ -4,6 +4,7 @@ namespace file_bookmark
 {
 	public partial class Form1 : Form
 	{
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -22,6 +23,9 @@ namespace file_bookmark
 				//閉じる
 				sw.Close();
 			}
+
+			menu_bar1.winmode_1 += new EventHandler(winmode_1);
+			menu_bar1.winmode_2 += new EventHandler(winmode_2);
 		}
 
 		private void dragdrop1_Load(object sender, EventArgs e)
@@ -32,6 +36,24 @@ namespace file_bookmark
 		private void Form1_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		//window modeを変える
+		private void winmode_1(object sender, EventArgs e)
+		{
+			this.win1_pin1.Visible = true;
+			this.win2_list1.Visible = false;
+		}
+
+		private void winmode_2(object sender, EventArgs e)
+		{
+			this.win1_pin1.Visible = false;
+			this.win2_list1.Visible = true;
+		}
+
+		private void menu_bar1_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("hoge");
 		}
 	}
 }

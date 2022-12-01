@@ -28,19 +28,11 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.u_button_21 = new file_bookmark.u_button_2();
 			this.u_button_22 = new file_bookmark.u_button_2();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.u_button_21 = new file_bookmark.u_button_2();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// u_button_21
-			// 
-			this.u_button_21.Location = new System.Drawing.Point(0, 0);
-			this.u_button_21.Name = "u_button_21";
-			this.u_button_21.Size = new System.Drawing.Size(112, 33);
-			this.u_button_21.TabIndex = 0;
-			this.u_button_21.text = "ファイルをピン止め";
 			// 
 			// u_button_22
 			// 
@@ -59,13 +51,21 @@
 			this.pictureBox1.TabIndex = 2;
 			this.pictureBox1.TabStop = false;
 			// 
+			// u_button_21
+			// 
+			this.u_button_21.Location = new System.Drawing.Point(0, 0);
+			this.u_button_21.Name = "u_button_21";
+			this.u_button_21.Size = new System.Drawing.Size(98, 33);
+			this.u_button_21.TabIndex = 4;
+			this.u_button_21.text = "ファイルをピン止め";
+			// 
 			// menu_bar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.u_button_21);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.u_button_22);
-			this.Controls.Add(this.u_button_21);
 			this.Name = "menu_bar";
 			this.Size = new System.Drawing.Size(265, 40);
 			this.Load += new System.EventHandler(this.menu_bar_Load);
@@ -75,9 +75,8 @@
 		}
 
 		#endregion
-
-		private u_button_2 u_button_21;
 		private u_button_2 u_button_22;
 		private PictureBox pictureBox1;
+		private u_button_2 u_button_21;
 	}
 }

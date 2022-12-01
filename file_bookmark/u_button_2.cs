@@ -12,6 +12,9 @@ namespace file_bookmark
 {
 	public partial class u_button_2 : UserControl
 	{
+
+		public event EventHandler button_click;
+
 		public string text
 		{
 			get
@@ -54,6 +57,7 @@ namespace file_bookmark
 			this.pictureBox1.Image = canvas;
 		}
 
+		//マウスクリックによってラベルの色を変える
 		private void label1_MouseUp(object sender, MouseEventArgs e)
 		{
 			label1.ForeColor = Color.FromArgb(0, 255, 136);
@@ -62,6 +66,24 @@ namespace file_bookmark
 		private void label1_MouseDown(object sender, MouseEventArgs e)
 		{
 			label1.ForeColor = Color.FromArgb(0, 150, 77);
+		}
+
+
+		//button click event
+		//親のコントロールでクリックイベントを操作できるようにする
+		private void label1_Click(object sender, EventArgs e)
+		{
+			if(button_click != null)
+			{
+				this.button_click(this, e);
+			}
+		}
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			if (button_click != null)
+			{
+				this.button_click(this, e);
+			}
 		}
 	}
 }
