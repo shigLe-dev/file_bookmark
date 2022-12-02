@@ -37,6 +37,7 @@
 			this.file_click_box1.Name = "file_click_box1";
 			this.file_click_box1.Size = new System.Drawing.Size(239, 41);
 			this.file_click_box1.TabIndex = 0;
+			this.file_click_box1.text = "file_name";
 			// 
 			// file_list_box
 			// 
@@ -46,6 +47,7 @@
 			this.Controls.Add(this.file_click_box1);
 			this.Name = "file_list_box";
 			this.Size = new System.Drawing.Size(239, 220);
+			this.Load += new System.EventHandler(this.file_list_box_Load);
 			this.ResumeLayout(false);
 
 		}

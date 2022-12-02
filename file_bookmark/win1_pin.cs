@@ -36,6 +36,9 @@ namespace file_bookmark
 			{
 				comboBox1.Items.Add(file_data[i][0]);
 			}
+
+			//コンボボックス設定
+			comboBox1.SelectedIndex = 0;
 		}
 
 		private void dragdrop1_DragDrop(object sender, DragEventArgs e)

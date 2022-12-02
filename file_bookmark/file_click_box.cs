@@ -17,6 +17,18 @@ namespace file_bookmark
 			InitializeComponent();
 		}
 
+		public string text
+		{
+			get
+			{
+				return (this.label1.Text);
+			}
+			set
+			{
+				this.label1.Text = value;
+			}
+		}
+
 		private void file_click_box_Load(object sender, EventArgs e)
 		{
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
