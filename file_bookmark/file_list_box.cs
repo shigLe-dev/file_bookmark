@@ -67,11 +67,12 @@ namespace file_bookmark
 			{
 				fcb_tmp = new file_click_box();
 				fcb_tmp.Name = "fcb"+i.ToString();
-				fcb_tmp.text = get_filename(data_tmp[i]);
+				fcb_tmp.text = get_filename(data_tmp[i]); //ファイル名を取得して代入
+				fcb_tmp.file_path = data_tmp[i]; //ファイルのパス
 				fcb_tmp.Left = 0;
-				fcb_tmp.Top = i*41;
+				fcb_tmp.Top = i*34;
 				fcb_tmp.Width = 239;
-				fcb_tmp.Height = 41;
+				fcb_tmp.Height = 34;
 				this.Controls.Add(fcb_tmp);
 			}
 		}

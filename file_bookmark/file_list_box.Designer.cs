@@ -28,23 +28,13 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.file_click_box1 = new file_bookmark.file_click_box();
 			this.SuspendLayout();
-			// 
-			// file_click_box1
-			// 
-			this.file_click_box1.Location = new System.Drawing.Point(0, 0);
-			this.file_click_box1.Name = "file_click_box1";
-			this.file_click_box1.Size = new System.Drawing.Size(239, 41);
-			this.file_click_box1.TabIndex = 0;
-			this.file_click_box1.text = "file_name";
 			// 
 			// file_list_box
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
-			this.Controls.Add(this.file_click_box1);
 			this.Name = "file_list_box";
 			this.Size = new System.Drawing.Size(239, 220);
 			this.Load += new System.EventHandler(this.file_list_box_Load);
@@ -53,7 +43,5 @@
 		}
 
 		#endregion
-
-		private file_click_box file_click_box1;
 	}
 }

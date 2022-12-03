@@ -14,8 +14,8 @@ namespace file_bookmark
 			//bookmark.csvが存在しなかったら作成
 			if (!System.IO.File.Exists("./bookmark.csv"))
 			{
-				using (FileStream fs = File.Create("./bookmark.csv")) ;
 
+				using (FileStream fs = File.Create("./bookmark.csv")) ;
 
 				System.IO.StreamWriter sw = new System.IO.StreamWriter("./bookmark.csv",false, System.Text.Encoding.UTF8);
 				//TextBox1.Textの内容を書き込む
@@ -35,7 +35,7 @@ namespace file_bookmark
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		//window modeを変える
@@ -49,6 +49,9 @@ namespace file_bookmark
 		{
 			this.win1_pin1.Visible = false;
 			this.win2_list1.Visible = true;
+
+			//画面が変わったら更新
+			this.win2_list1.combo_reset();
 		}
 
 		private void menu_bar1_Click(object sender, EventArgs e)

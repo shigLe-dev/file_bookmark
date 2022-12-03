@@ -16,9 +16,10 @@ namespace file_bookmark
 
 		public List<List<string>> file_data = new List<List<string>>();
 
-		public win2_list()
+		public void combo_reset()
 		{
-			InitializeComponent();
+
+			comboBox1.Items.Clear();
 
 			readcsv();
 
@@ -29,7 +30,13 @@ namespace file_bookmark
 
 			comboBox1.SelectedIndex = 0;
 
+			//ブックマークのリストを表示する
 			file_list_box1.display_list(comboBox1.SelectedItem.ToString());
+		}
+
+		public win2_list()
+		{
+			InitializeComponent();
 		}
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

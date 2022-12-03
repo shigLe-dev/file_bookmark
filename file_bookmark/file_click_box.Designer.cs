@@ -47,18 +47,21 @@
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(136)))));
-			this.label1.Location = new System.Drawing.Point(49, 8);
+			this.label1.Location = new System.Drawing.Point(49, 5);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(68, 19);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "file_name";
+			this.label1.Click += new System.EventHandler(this.box_clicked);
+			this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.boxmouse_down);
+			this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.boxmouse_up);
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-			this.label2.Location = new System.Drawing.Point(185, 8);
+			this.label2.Location = new System.Drawing.Point(183, 5);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(37, 19);
 			this.label2.TabIndex = 2;
@@ -76,6 +79,9 @@
 			this.Name = "file_click_box";
 			this.Size = new System.Drawing.Size(239, 34);
 			this.Load += new System.EventHandler(this.file_click_box_Load);
+			this.Click += new System.EventHandler(this.box_clicked);
+			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.boxmouse_down);
+			this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.boxmouse_up);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
