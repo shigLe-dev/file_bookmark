@@ -32,6 +32,8 @@ namespace file_bookmark
 
 			//ブックマークのリストを表示する
 			file_list_box1.display_list(comboBox1.SelectedItem.ToString());
+
+			file_list_box1.bookmarkbar = comboBox1.SelectedItem.ToString();
 		}
 
 		public win2_list()
@@ -42,6 +44,7 @@ namespace file_bookmark
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			file_list_box1.display_list(comboBox1.SelectedItem.ToString());
+			file_list_box1.bookmarkbar = comboBox1.SelectedItem.ToString();
 		}
 
 		private void readcsv()

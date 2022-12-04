@@ -56,7 +56,7 @@ namespace file_bookmark
 
 		private void menu_bar1_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("hoge");
+			//MessageBox.Show("hoge");
 		}
 	}
 }

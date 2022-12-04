@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace file_bookmark
 {
@@ -16,6 +17,8 @@ namespace file_bookmark
 		{
 			InitializeComponent();
 		}
+
+		public string bookmarkbar = "";
 
 		//bookmarkのファイルのデータ()
 		/*
@@ -27,6 +30,9 @@ namespace file_bookmark
 		//ファイルリストを表示するためのやつ
 		public void display_list(string bbar /*bookmark bar*/)
 		{
+			//前の表示をリセット
+			this.Controls.Clear();
+
 			readcsv();
 
 			//fcb_listにあるコントロール(古いやつ)は削除
@@ -51,8 +57,10 @@ namespace file_bookmark
 				return;
 			}
 
+			//フォルダの位置を把握
 			List<string> data_tmp = file_data[bbar_pos];
 
+			//0番目はブックマークフォルダなので消す
 			data_tmp.RemoveAt(0);
 
 			//ブックマークが存在しないならやめる
@@ -69,6 +77,7 @@ namespace file_bookmark
 				fcb_tmp.Name = "fcb"+i.ToString();
 				fcb_tmp.text = get_filename(data_tmp[i]); //ファイル名を取得して代入
 				fcb_tmp.file_path = data_tmp[i]; //ファイルのパス
+				fcb_tmp.label2.Click += box_clicked;
 				fcb_tmp.Left = 0;
 				fcb_tmp.Top = i*34;
 				fcb_tmp.Width = 239;
@@ -77,8 +86,43 @@ namespace file_bookmark
 			}
 		}
 
+
 		private void file_list_box_Load(object sender, EventArgs e)
 		{
+
+		}
+
+		//削除ボタンがクリックされたら消す
+		private void box_clicked(object sender, EventArgs e)
+		{
+			//表示から消す
+			Label objtmp = (Label)sender;
+
+			//controlをfile_click_boxに変換
+			file_click_box fcb_ctr = (file_click_box)this.Controls.Find(objtmp.Parent.Name, true)[0];
+
+			Control control = this.Controls.Find(objtmp.Parent.Name, true)[0];
+			this.Controls.Remove(control);
+			control.Dispose();
+
+			readcsv();
+
+			for (int i = 0; i < file_data.Count; i++)
+			{
+				if (file_data[i][0] == bookmarkbar)
+				{
+					for (int j = 1;j < file_data[i].Count;j++) 
+					{
+						if (file_data[i][j] == fcb_ctr.file_path)
+						{
+							file_data[i].RemoveAt(j);
+						}
+					}
+					break;
+				}
+			}
+
+			writecsv();
 
 		}
 
@@ -108,6 +152,32 @@ namespace file_bookmark
 			}
 
 			sr.Close();
+		}
+		//二次元配列をcsvとして保存
+		private void writecsv()
+		{
+			string outstr = "";
+			for (int i = 0; i < file_data.Count; i++)
+			{
+				for (int j = 0; j < file_data[i].Count; j++)
+				{
+					outstr += file_data[i][j];
+
+					if (j != file_data[i].Count - 1)
+					{
+						outstr += ",";
+					}
+				}
+				if (i != file_data.Count - 1)
+				{
+					outstr += "\n";
+				}
+			}
+
+			System.IO.StreamWriter sw = new System.IO.StreamWriter("./bookmark.csv", false, System.Text.Encoding.UTF8);
+			sw.Write(outstr);
+			//閉じる
+			sw.Close();
 		}
 
 		//パス to ファイル名

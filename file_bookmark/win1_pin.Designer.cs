@@ -32,12 +32,14 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.dragdrop1 = new file_bookmark.dragdrop();
 			this.label1 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// comboBox1
 			// 
 			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(188, 113);
+			this.comboBox1.Location = new System.Drawing.Point(175, 113);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(121, 23);
 			this.comboBox1.TabIndex = 1;
@@ -69,17 +71,27 @@
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(136)))));
-			this.label1.Location = new System.Drawing.Point(62, 113);
+			this.label1.Location = new System.Drawing.Point(49, 116);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(120, 20);
 			this.label1.TabIndex = 2;
 			this.label1.Text = "ブックマークフォルダ:";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Location = new System.Drawing.Point(302, 113);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+			this.pictureBox1.TabIndex = 5;
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// win1_pin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.comboBox1);
@@ -87,6 +99,7 @@
 			this.Name = "win1_pin";
 			this.Size = new System.Drawing.Size(365, 397);
 			this.Load += new System.EventHandler(this.win1_pin_Load);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -97,5 +110,6 @@
 		private Label label2;
 		private dragdrop dragdrop1;
 		private Label label1;
+		private PictureBox pictureBox1;
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,16 +30,12 @@ namespace file_bookmark
 
 		private void win1_pin_Load(object sender, EventArgs e)
 		{
+			//コンボボックス初期化
+			combo_reset();
 
-			readcsv();
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
-			for (int i = 0; i < file_data.Count; i++)
-			{
-				comboBox1.Items.Add(file_data[i][0]);
-			}
-
-			//コンボボックス設定
-			comboBox1.SelectedIndex = 0;
+			this.pictureBox1.Image = Resource1.add_folder;
 		}
 
 		private void dragdrop1_DragDrop(object sender, DragEventArgs e)
@@ -75,6 +72,30 @@ namespace file_bookmark
 			e.Effect = DragDropEffects.All;
 		}
 
+		//add folder button
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			string folder_name = Interaction.InputBox("新規フォルダの名前を入力してください。");
+
+			//入力されていたら追加
+			if(folder_name != "")
+			{
+				List<string> add_list = new List<string>();
+
+				add_list.Add(folder_name);
+
+				readcsv();
+				file_data.Add(add_list);
+			}
+
+			writecsv();
+
+			combo_reset();
+		}
+
+
+
+		//csvを読んでfile_dataに二次元配列として入れる
 		private void readcsv()
 		{
 			//初期化
@@ -103,6 +124,7 @@ namespace file_bookmark
 			sr.Close();
 		}
 
+		//二次元配列をcsvとして保存
 		private void writecsv()
 		{
 			string outstr = "";
@@ -128,5 +150,22 @@ namespace file_bookmark
 			//閉じる
 			sw.Close();
 		}
+
+		//コンボボックスをリセット
+		public void combo_reset()
+		{
+
+			comboBox1.Items.Clear();
+
+			readcsv();
+
+			for (int i = 0; i < file_data.Count; i++)
+			{
+				comboBox1.Items.Add(file_data[i][0]);
+			}
+
+			comboBox1.SelectedIndex = 0;
+		}
+
 	}
 }
